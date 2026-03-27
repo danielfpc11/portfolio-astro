@@ -14,8 +14,7 @@ const translations: Record<Locale, TranslationKeys> = {
     hero: {
       greeting: 'Hola, soy',
       tagline: 'Construyo software de calidad',
-      shortBio:
-        'Desarrollador perfeccionista y orientado al detalle, siempre enfocado en ofrecer soluciones sólidas y bien estructuradas.',
+      shortBio: 'Desarrollador perfeccionista y orientado al detalle, siempre enfocado en ofrecer soluciones sólidas y bien estructuradas.',
       availability: 'Abierto a ofertas y disponible como freelance',
       location: 'Madrid, España',
       cta: 'Contáctame',
@@ -25,8 +24,14 @@ const translations: Record<Locale, TranslationKeys> = {
       bio: 'Soy desarrollador Full Stack con más de dos años de experiencia profesional, trabajando principalmente con Java, Spring, TypeScript y Angular. Me considero una persona perfeccionista y orientada al detalle, siempre enfocada en ofrecer soluciones sólidas y bien estructuradas. Disfruto del trabajo en equipo y valoro la retroalimentación para seguir mejorando y aprendiendo. Mi objetivo es seguir creciendo profesionalmente, perfeccionar mis habilidades técnicas y aportar valor en proyectos que requieran eficiencia, escalabilidad e innovación.',
       languagesTitle: 'Idiomas',
       languages: [
-        { name: 'Español', level: 'Nativo' },
-        { name: 'Inglés', level: 'Intermedio (B1 alto)' },
+        {
+          name: 'Español',
+          level: 'Nativo' 
+        },
+        {
+          name: 'Inglés',
+          level: 'Intermedio (B1 alto)'
+        },
       ],
       softSkillsTitle: 'Competencias',
       softSkills: [
@@ -75,7 +80,10 @@ const translations: Record<Locale, TranslationKeys> = {
           descriptions: [
             'Desarrollos, incidencias y documentación.',
           ],
-          technologies: ['Java', 'SISnet (framework propio)'],
+          technologies: [
+            'Java',
+            'SISnet (framework propio)'
+          ],
           companyUrl: 'https://www.prosegur.com/lineas-negocio/avos',
         },
         {
@@ -129,9 +137,20 @@ const translations: Record<Locale, TranslationKeys> = {
             'Revisión de Merge Requests y apoyo al equipo de desarrollo (2 personas a cargo).',
           ],
           technologies: [
-            'Java 8', 'Spring Boot 2', 'JUnit 4/5', 'HTML', 'CSS', 'JavaScript',
-            'jQuery', 'Bootstrap 4', 'Thymeleaf', 'SQL Server', 'IntelliJ',
-            'Android Studio', 'Git', 'GitLab',
+            'Java 8',
+            'Spring Boot 2',
+            'JUnit 4/5',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'jQuery',
+            'Bootstrap 4',
+            'Thymeleaf',
+            'SQL Server',
+            'IntelliJ',
+            'Android Studio',
+            'Git',
+            'GitLab',
           ],
           companyUrl: 'https://www.saraworld.com/',
         },
@@ -176,9 +195,17 @@ const translations: Record<Locale, TranslationKeys> = {
             },
           ],
           technologies: [
-            'Java 8/11/17', 'Groovy', 'Spring Boot 3', 'SAP Hybris',
-            'TypeScript 4/5', 'Angular 15-18', 'SAP Composable Storefront',
-            'Git', 'GitLab', 'Jira', 'Confluence',
+            'Java 8/11/17',
+            'Groovy',
+            'Spring Boot 3',
+            'SAP Hybris',
+            'TypeScript 4/5',
+            'Angular 15-18',
+            'SAP Composable Storefront',
+            'Git',
+            'GitLab',
+            'Jira',
+            'Confluence',
           ],
           companyUrl: 'https://netconomy.net/',
         },
@@ -192,7 +219,15 @@ const translations: Record<Locale, TranslationKeys> = {
             'Formación en Java, JUnit, Spring Boot, Git, GitLab, JSP y JSTL.',
             'Uso de buenas prácticas, limpieza de código y patrones de diseño.',
           ],
-          technologies: ['Java', 'Spring Boot', 'JUnit', 'JSP', 'JSTL', 'Git', 'GitLab'],
+          technologies: [
+            'Java',
+            'Spring Boot',
+            'JUnit',
+            'JSP',
+            'JSTL',
+            'Git',
+            'GitLab'
+          ],
           companyUrl: 'https://netconomy.net/',
         },
       ],
@@ -225,11 +260,9 @@ const translations: Record<Locale, TranslationKeys> = {
     },
     seo: {
       metaTitle: 'Daniel Pulgarin — Full-Stack Developer | Madrid',
-      metaDescription:
-        'Desarrollador Full Stack con más de 2 años de experiencia en Java, Spring Boot, TypeScript y Angular. Soluciones sólidas, bien estructuradas y orientadas al detalle.',
+      metaDescription: 'Desarrollador Full Stack con más de 2 años de experiencia en Java, Spring Boot, TypeScript y Angular. Soluciones sólidas, bien estructuradas y orientadas al detalle.',
     },
   },
-
   en: {
     nav: {
       about: 'About',
@@ -243,8 +276,7 @@ const translations: Record<Locale, TranslationKeys> = {
     hero: {
       greeting: "Hi, I'm",
       tagline: 'I build quality software',
-      shortBio:
-        'Detail-oriented and perfectionist developer, always focused on delivering solid and well-structured solutions.',
+      shortBio: 'Detail-oriented and perfectionist developer, always focused on delivering solid and well-structured solutions.',
       availability: 'Open to offers and available as freelance',
       location: 'Madrid, Spain',
       cta: 'Get in touch',
@@ -254,8 +286,14 @@ const translations: Record<Locale, TranslationKeys> = {
       bio: "Full Stack developer with over two years of professional experience, working primarily with Java, Spring, TypeScript and Angular. Perfectionist and detail-oriented, always focused on delivering solid and well-structured solutions. I enjoy teamwork and value feedback to keep improving and learning. My goal is to continue growing professionally, refine my technical skills and add value to projects that require efficiency, scalability and innovation.",
       languagesTitle: 'Languages',
       languages: [
-        { name: 'Spanish', level: 'Native' },
-        { name: 'English', level: 'Intermediate (B1 upper)' },
+        {
+          name: 'Spanish',
+          level: 'Native'
+        },
+        {
+          name: 'English',
+          level: 'Intermediate (B1 upper)'
+        },
       ],
       softSkillsTitle: 'Competencies',
       softSkills: [
@@ -304,7 +342,10 @@ const translations: Record<Locale, TranslationKeys> = {
           descriptions: [
             'Development, incident resolution and documentation.',
           ],
-          technologies: ['Java', 'SISnet (proprietary framework)'],
+          technologies: [
+            'Java',
+            'SISnet (proprietary framework)'
+          ],
           companyUrl: 'https://www.prosegur.com/lineas-negocio/avos',
         },
         {
@@ -358,9 +399,20 @@ const translations: Record<Locale, TranslationKeys> = {
             'Merge Request reviews and development team support (2 people under supervision).',
           ],
           technologies: [
-            'Java 8', 'Spring Boot 2', 'JUnit 4/5', 'HTML', 'CSS', 'JavaScript',
-            'jQuery', 'Bootstrap 4', 'Thymeleaf', 'SQL Server', 'IntelliJ',
-            'Android Studio', 'Git', 'GitLab',
+            'Java 8',
+            'Spring Boot 2',
+            'JUnit 4/5',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'jQuery',
+            'Bootstrap 4',
+            'Thymeleaf',
+            'SQL Server',
+            'IntelliJ',
+            'Android Studio',
+            'Git',
+            'GitLab',
           ],
           companyUrl: 'https://www.saraworld.com/',
         },
@@ -405,9 +457,17 @@ const translations: Record<Locale, TranslationKeys> = {
             },
           ],
           technologies: [
-            'Java 8/11/17', 'Groovy', 'Spring Boot 3', 'SAP Hybris',
-            'TypeScript 4/5', 'Angular 15-18', 'SAP Composable Storefront',
-            'Git', 'GitLab', 'Jira', 'Confluence',
+            'Java 8/11/17',
+            'Groovy',
+            'Spring Boot 3',
+            'SAP Hybris',
+            'TypeScript 4/5',
+            'Angular 15-18',
+            'SAP Composable Storefront',
+            'Git',
+            'GitLab',
+            'Jira',
+            'Confluence',
           ],
           companyUrl: 'https://netconomy.net/',
         },
@@ -421,7 +481,15 @@ const translations: Record<Locale, TranslationKeys> = {
             'Training in Java, JUnit, Spring Boot, Git, GitLab, JSP and JSTL.',
             'Use of best practices, clean code and design patterns.',
           ],
-          technologies: ['Java', 'Spring Boot', 'JUnit', 'JSP', 'JSTL', 'Git', 'GitLab'],
+          technologies: [
+            'Java',
+            'Spring Boot',
+            'JUnit',
+            'JSP',
+            'JSTL',
+            'Git',
+            'GitLab'
+          ],
           companyUrl: 'https://netconomy.net/',
         },
       ],
@@ -454,8 +522,7 @@ const translations: Record<Locale, TranslationKeys> = {
     },
     seo: {
       metaTitle: 'Daniel Pulgarin — Full-Stack Developer | Madrid',
-      metaDescription:
-        'Full Stack Developer with over 2 years of experience in Java, Spring Boot, TypeScript and Angular. Solid, well-structured and detail-oriented solutions.',
+      metaDescription: 'Full Stack Developer with over 2 years of experience in Java, Spring Boot, TypeScript and Angular. Solid, well-structured and detail-oriented solutions.',
     },
   },
 };
