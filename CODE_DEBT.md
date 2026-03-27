@@ -1,6 +1,3 @@
-## src/i18n/utils.ts
-- [ ] 25/03/2026 - Formateo de código que no me mola.
-
 ## src/i18n/translations.ts
 - [ ] 25/03/2026 - No me gusta que se de un salto de línea en las traducciones largas.
 
