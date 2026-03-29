@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import 'lenis/dist/lenis.css';
 import { getCurrentLocale } from '../i18n/utils';
 import { getTranslations } from '../i18n/translations';
 
@@ -27,4 +28,15 @@ const { title = translations.seo.metaTitle, description = translations.seo.metaD
   <body class="bg-background text-text font-sans min-h-screen antialiased">
     <slot/>
   </body>
+  <script>
+      import Lenis from 'lenis';
+
+      document.addEventListener('astro:page-load', () => {
+        const lenis = new Lenis({
+          autoRaf: true,
+          smoothWheel: true,
+          lerp: 0.1,
+        });
+      });
+    </script>
 </html>
