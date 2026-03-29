@@ -1,1 +1,3 @@
 Para esta sesión, carga inicialmente los contextos de los archivos CLAUDE.md, .claude/rules/*, CONTEXT.md y PLAN_DESARROLLO.md, voy a continuar el desarrollo de mi aplicación y es primordial tener todos estos contextos cargados para desarrollo y conocimiento de la aplicación.
+
+Ahora necesito que con el contexto del proyecto procedas a crear un plan para el desarrollo del punto 4.1 del PLAN_DESARROLLO.md
