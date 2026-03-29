@@ -3,7 +3,21 @@ import '../styles/global.css';
 import 'lenis/dist/lenis.css';
 import { getCurrentLocale, getAbsoluteLocalizedUrl, getAlternateLocales } from '../i18n/utils';
 import { getTranslations } from '../i18n/translations';
-import { LOCALES, DEFAULT_LOCALE, OG_LOCALES, OG_IMAGE_PATH, SITE_NAME } from '../../astro.config';
+import {
+  LOCALES,
+  DEFAULT_LOCALE,
+  OG_LOCALES,
+  OG_IMAGE_PATH,
+  SITE_NAME,
+  SITE_URL,
+  PERSON_FULL_NAME,
+  PERSON_JOB_TITLE,
+  PERSON_EMAIL,
+  PERSON_LINKEDIN_URL,
+  PERSON_GITHUB_URL,
+  PERSON_LOCATION_LOCALITY,
+  PERSON_LOCATION_COUNTRY,
+} from '../../astro.config';
 
 interface Props {
   title?: string;
@@ -15,6 +29,37 @@ const translations = getTranslations(currentLocale);
 const { title = translations.seo.metaTitle, description = translations.seo.metaDescription } = Astro.props;
 const canonicalUrl = getAbsoluteLocalizedUrl(currentLocale);
 const ogImageUrl = new URL(OG_IMAGE_PATH, Astro.site).href;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: PERSON_FULL_NAME,
+  url: SITE_URL,
+  jobTitle: PERSON_JOB_TITLE,
+  email: `mailto:${PERSON_EMAIL}`,
+  sameAs: [
+    PERSON_LINKEDIN_URL,
+    PERSON_GITHUB_URL,
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: PERSON_LOCATION_LOCALITY,
+    addressCountry: PERSON_LOCATION_COUNTRY,
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: description,
+  inLanguage: [...LOCALES],
+  author: {
+    '@type': 'Person',
+    name: PERSON_FULL_NAME,
+  },
+};
 ---
 
 <!DOCTYPE html>
@@ -54,6 +99,10 @@ const ogImageUrl = new URL(OG_IMAGE_PATH, Astro.site).href;
     <meta name="twitter:title" content={title}/>
     <meta name="twitter:description" content={description}/>
     <meta name="twitter:image" content={ogImageUrl}/>
+
+    <!-- Structured Data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)}/>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)}/>
   </head>
   <body class="bg-background text-text font-sans min-h-screen antialiased">
     <slot/>

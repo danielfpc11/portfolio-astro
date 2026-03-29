@@ -22,6 +22,15 @@ export const OG_IMAGE_PATH = '/og-image.png';
 export const SITE_NAME = 'Daniel Pulgarin';
 export const SITE_URL = 'https://danielpulgarin.com';
 
+/* Person configuration */
+export const PERSON_FULL_NAME = 'Daniel Fernando Pulgarin Cardenas';
+export const PERSON_JOB_TITLE = 'Full-Stack Developer';
+export const PERSON_EMAIL = 'danielfpc11@gmail.com';
+export const PERSON_LINKEDIN_URL = 'https://www.linkedin.com/in/daniel-pulgarin/';
+export const PERSON_GITHUB_URL = 'https://github.com/danielfpc11';
+export const PERSON_LOCATION_LOCALITY = 'Madrid';
+export const PERSON_LOCATION_COUNTRY = 'ES';
+
 export default defineConfig({
   site: SITE_URL,
   integrations: [mdx(), sitemap()],

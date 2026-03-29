@@ -40,7 +40,7 @@
 - [ x ] 3.1 — BaseLayout (estructura HTML, head con meta tags, slot para contenido, import de estilos globales)
 - [ x ] 3.2 — Integracion de Lenis (smooth scroll) en el layout
 - [ x ] 3.3 — Tags SEO base en el head (meta title, meta description, hreflang, og tags, favicon)
-- [ ] 3.4 — JSON-LD structured data (schema Person + WebSite)Com
+- [ x ] 3.4 — JSON-LD structured data (schema Person + WebSite)Com
 
 ---
 
