@@ -11,8 +11,19 @@ export const LOCALE_LABELS: Record<(typeof LOCALES)[number], string> = {
   en: 'English',
 };
 
+/* Open Graph configuration */
+export const OG_LOCALES: Record<(typeof LOCALES)[number], string> = {
+  es: 'es_ES',
+  en: 'en_US',
+};
+export const OG_IMAGE_PATH = '/og-image.png';
+
+/* Site configuration */
+export const SITE_NAME = 'Daniel Pulgarin';
+export const SITE_URL = 'https://danielpulgarin.com';
+
 export default defineConfig({
-  site: 'https://danielpulgarin.com',
+  site: SITE_URL,
   integrations: [mdx(), sitemap()],
   i18n: {
     defaultLocale: DEFAULT_LOCALE,

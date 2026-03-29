@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
 import 'lenis/dist/lenis.css';
-import { getCurrentLocale } from '../i18n/utils';
+import { getCurrentLocale, getAbsoluteLocalizedUrl, getAlternateLocales } from '../i18n/utils';
 import { getTranslations } from '../i18n/translations';
+import { LOCALES, DEFAULT_LOCALE, OG_LOCALES, OG_IMAGE_PATH, SITE_NAME } from '../../astro.config';
 
 interface Props {
   title?: string;
@@ -12,6 +13,8 @@ interface Props {
 const currentLocale = getCurrentLocale(Astro.currentLocale);
 const translations = getTranslations(currentLocale);
 const { title = translations.seo.metaTitle, description = translations.seo.metaDescription } = Astro.props;
+const canonicalUrl = getAbsoluteLocalizedUrl(currentLocale);
+const ogImageUrl = new URL(OG_IMAGE_PATH, Astro.site).href;
 ---
 
 <!DOCTYPE html>
@@ -24,6 +27,33 @@ const { title = translations.seo.metaTitle, description = translations.seo.metaD
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <title>{title}</title>
     <meta name="description" content={description}/>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl}/>
+
+    <!-- Hreflang -->
+    {LOCALES.map((locale) => (
+      <link rel="alternate" hreflang={locale} href={getAbsoluteLocalizedUrl(locale)}/>
+    ))}
+    <link rel="alternate" hreflang="x-default" href={getAbsoluteLocalizedUrl(DEFAULT_LOCALE)}/>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:url" content={canonicalUrl}/>
+    <meta property="og:site_name" content={SITE_NAME}/>
+    <meta property="og:locale" content={OG_LOCALES[currentLocale]}/>
+    {getAlternateLocales(currentLocale).map((locale) => (
+      <meta property="og:locale:alternate" content={OG_LOCALES[locale]}/>
+    ))}
+    <meta property="og:image" content={ogImageUrl}/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:image" content={ogImageUrl}/>
   </head>
   <body class="bg-background text-text font-sans min-h-screen antialiased">
     <slot/>
